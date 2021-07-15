@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.cs" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 526.758, 69.3496 )
+
+[sub_resource type="ShaderMaterial" id=3]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 174.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -2.37842, -0.490692 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 80.726, 104.271 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 0.752941, 0.392157, 0.392157, 1 )
+light_mask = 0
+position = Vector2( 422.251, 431.435 )
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionShape2D"]
+polygon = PoolVector2Array( -530.236, -66.6057, 527.124, -66.6057, 529.368, 65.8448, -523.501, 68.0898 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 525.823, 266.857 )
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 0.00392157, 0.00392157, 1 )
+position = Vector2( -587.261, -227.142 )
+scale = Vector2( 1.08831, 1 )
+polygon = PoolVector2Array( 403.814, 249.592, 400.25, 281.665, 432.323, 319.082, 355.706, 319.082, 343.233, 354.718, 353.924, 368.973, 368.178, 340.464, 425.196, 335.118, 421.632, 374.318, 419.85, 395.7, 387.778, 422.427, 402.032, 429.554, 426.977, 408.172, 457.268, 434.899, 469.741, 417.081, 441.232, 397.481, 450.141, 342.246, 501.813, 342.246, 507.158, 385.009, 523.194, 379.663, 517.849, 320.864, 457.268, 320.864, 494.686, 281.665, 517.849, 256.719, 485.777, 231.774, 402.032, 229.992 )
+
+[node name="Polygon2D" type="Polygon2D" parent="KinematicBody2D/CollisionPolygon2D"]
+color = Color( 0.454902, 0, 1, 1 )
+polygon = PoolVector2Array( 440.315, 281.01, 401.122, 289.99, 427.938, 319.174, 351.616, 316.929, 343.365, 348.358, 345.428, 357.338, 376.369, 339.378, 430.001, 334.889, 413.499, 395.501, 399.06, 408.971, 396.997, 424.686, 421.75, 406.726, 458.88, 431.42, 471.256, 426.93, 440.315, 395.501, 446.503, 341.623, 500.135, 343.868, 506.323, 386.522, 522.826, 377.542, 514.574, 316.929, 448.566, 316.929, 522.826, 256.316, 483.633, 229.377, 405.248, 227.132, 396.997, 260.806, 401.122, 289.99 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 131.18, 80.7261 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+modulate = Color( 0, 0, 0, 1 )
+material = SubResource( 3 )
+position = Vector2( 709.929, 414.656 )
+shape = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2/CollisionShape2D"]
+position = Vector2( 0, 2.37842 )
+polygon = PoolVector2Array( 24.2859, -91.1435, -87.4996, -148.225, 43.3132, -162.496, 162.234, -64.981, 157.477, 72.9671, 102.774, 149.076, -25.6608, 170.482, -132.689, 125.292, -180.258, -5.52063, -137.446, -107.792, -94.6348, -145.847 )

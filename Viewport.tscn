@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="World" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 515.465, 169.4 )
+
+[node name="Viewport" type="Viewport"]
+size = Vector2( 222, 222 )
+world = SubResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+shape = SubResource( 2 )
